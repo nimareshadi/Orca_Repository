@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: language-consumer
+
+server:
+  port: 8081
+
+debug: true

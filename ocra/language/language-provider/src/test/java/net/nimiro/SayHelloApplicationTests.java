@@ -31,28 +31,28 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = LanguageProviderApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SayHelloApplicationTests {
 
-	@LocalServerPort
-	private int port;
+    @LocalServerPort
+    private int port;
 
-	@Autowired
-	private TestRestTemplate testRestTemplate;
+    @Autowired
+    private TestRestTemplate testRestTemplate;
 
-	@Test
-	public void shouldReturn200WhenSendingRequestToRoot() throws Exception {
-		@SuppressWarnings("rawtypes") ResponseEntity<String> entity = this.testRestTemplate.getForEntity(
-				"http://localhost:" + this.port + "/", String.class);
+    @Test
+    public void shouldReturn200WhenSendingRequestToRoot() throws Exception {
+        @SuppressWarnings("rawtypes") ResponseEntity<String> entity = this.testRestTemplate.getForEntity(
+                "http://localhost:" + this.port + "/", String.class);
 
-		then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
-		then(entity.getBody()).isEqualTo("Hi!");
-	}
+        then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
+        then(entity.getBody()).isEqualTo("Hi!");
+    }
 
-	@Test
-	public void shouldReturn200WhenSendingRequestToGreeting() throws Exception {
-		@SuppressWarnings("rawtypes") ResponseEntity<String> entity = this.testRestTemplate.getForEntity(
-				"http://localhost:" + this.port + "/greeting", String.class);
+    @Test
+    public void shouldReturn200WhenSendingRequestToGreeting() throws Exception {
+        @SuppressWarnings("rawtypes") ResponseEntity<String> entity = this.testRestTemplate.getForEntity(
+                "http://localhost:" + this.port + "/greeting", String.class);
 
-		then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
-		then(entity.getBody()).isNotEmpty();
-	}
+        then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
+        then(entity.getBody()).isNotEmpty();
+    }
 
 }

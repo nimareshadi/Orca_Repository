@@ -16,23 +16,23 @@ import java.util.*;
 @EnableDiscoveryClient
 public class LanguageProviderApplication {
 
-  private static Logger log = LoggerFactory.getLogger(LanguageProviderApplication.class);
-  @Autowired
-  LanguageRepository languageRepository;
+    private static Logger log = LoggerFactory.getLogger(LanguageProviderApplication.class);
+    @Autowired
+    LanguageRepository languageRepository;
 
-  @RequestMapping(value = "/getList")
-  public List<LanguageEntity> getList() {
-    List<LanguageEntity> languageEntities = languageRepository.findAll();
-    return languageEntities;
-  }
+    @RequestMapping(value = "/getList")
+    public List<LanguageEntity> getList() {
+        List<LanguageEntity> languageEntities = languageRepository.findAll();
+        return languageEntities;
+    }
 
-  @RequestMapping(value = "/")
-  public String home() {
-    log.info("Access /");
-    return "Hi!";
-  }
+    @RequestMapping(value = "/")
+    public String home() {
+        log.info("Access /");
+        return "Hi!";
+    }
 
-  public static void main(String[] args) {
-    SpringApplication.run(LanguageProviderApplication.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(LanguageProviderApplication.class, args);
+    }
 }

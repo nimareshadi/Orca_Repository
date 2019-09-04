@@ -1,12 +1,10 @@
-package net.nimiro;
+package net.nimiro.languageconsumer;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "language")
+
 public class LanguageEntity {
 
-    @Id
+
     public String id;
     public String code;
     public String name;
