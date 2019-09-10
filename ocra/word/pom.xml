@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework</groupId>
-    <artifactId>language</artifactId>
+    <artifactId>word</artifactId>
     <version>0.1.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>language-provider</module>
-        <module>language-consumer</module>
+        <module>word-provider</module>
+        <module>word-consumer</module>
 
     </modules>
 

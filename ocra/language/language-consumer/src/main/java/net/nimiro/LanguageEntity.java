@@ -1,4 +1,4 @@
-package net.nimiro.languageconsumer;
+package net.nimiro;
 
 
 

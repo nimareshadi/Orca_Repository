@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: language-consumer
+
+server:
+  port: 8082
+
+debug: true
+
+eureka:
+  client:
+    fetchRegistry: true

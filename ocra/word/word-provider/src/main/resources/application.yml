@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: word-provider
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: orcaDB
+server:
+  port: 8091
+
+
+

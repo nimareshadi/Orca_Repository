@@ -10,6 +10,7 @@
 
     <modules>
       <module>language</module>
+      <module>word</module>
       <module>eureka-server</module>
     </modules>
 </project>
