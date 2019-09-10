@@ -10,8 +10,8 @@ import java.util.List;
 @FeignClient(name = "word-provider")
 public interface WordServiceClient {
 
-    @RequestMapping(value = "/getList/{code}")
-    public WordEntity getList(@PathVariable(value = "code") String code);
+    @RequestMapping(value = "/words/{code}")
+    public WordEntity getWords(@PathVariable(value = "code") String code);
 
 
 }

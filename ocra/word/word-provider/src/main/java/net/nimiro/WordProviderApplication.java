@@ -10,26 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@RestController
+
 @SpringBootApplication
 @EnableDiscoveryClient
 public class WordProviderApplication {
-
-    private static Logger log = LoggerFactory.getLogger(WordProviderApplication.class);
-    @Autowired
-    WordRepository wordRepository;
-
-    @RequestMapping(value = "/getList/{code}")
-    public WordEntity getList(@PathVariable(value = "code") String code) {
-        WordEntity wordEntity = wordRepository.findByCode(code);
-        return wordEntity;
-    }
-
-    @RequestMapping(value = "/")
-    public String home() {
-        log.info("Access /");
-        return "Hi!";
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(WordProviderApplication.class, args);

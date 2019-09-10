@@ -36,12 +36,6 @@ public class LanguageEntity {
         this.name = name;
     }
 
-    private class Word {
-        public String key;
-        public String value;
-    }
-
-
 }
 
 
