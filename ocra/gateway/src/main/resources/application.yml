@@ -1,0 +1,19 @@
+
+zuul:
+
+  prefix: /api
+  ignoredServices: /**
+  routes:
+    language:
+      path: /language/**
+      serviceId: language-provider
+    word:
+      path: /word/**
+      serviceId: word-provider
+
+eureka:
+  client:
+    fetchRegistry: true
+
+server:
+  port: 8765

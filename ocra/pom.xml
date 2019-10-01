@@ -11,6 +11,7 @@
     <modules>
       <module>language</module>
       <module>word</module>
+      <module>gateway</module>
       <module>eureka-server</module>
     </modules>
 </project>

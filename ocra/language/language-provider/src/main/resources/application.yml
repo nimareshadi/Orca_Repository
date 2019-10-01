@@ -6,8 +6,17 @@ spring:
       host: localhost
       port: 27017
       database: orcaDB
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+
+ribbon:
+  eureka:
+    enabled: true
 server:
-  port: 8090
-
-
-
+  port: ${PORT:8092}
